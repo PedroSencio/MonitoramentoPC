@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monitoramento</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="all">
+    <h2 id="tittle">Monitor de Desktop</h2>
+    <button id="status"><img src="./icons/on-off-button.png" alt=""></button>
+    <div id="line-1">
+      <div class="box-line-1">
+        <h2 class="tittle-box">Temperature:</h2>
+        <h1><span id="temp">--</span>ºC</h1>
+      </div>
+      <div class="box-line-1">
+        <h2 class="tittle-box">Memory Usage:</h2>
+        <h1><span id="memory">--</span>%</h1>
+      </div>
+    </div>
+    <div id="line-2">
+      <h2 class="tittle-box">CPU Usage:</h2>
+      <h1><span id="cpu">--</span>%</h1>
+      <canvas id="cpu-chart" width="320" height="90" aria-label="Histórico de CPU"></canvas>
+    </div>
+    <div id="line-3">
+      <div id="box-vert">
+        <h2 class="tittle-box1">HD Usage:</h2>
+        <h1><span id="hd">--</span>%</h1>
+        <div class="vertical-bar" aria-hidden="true">
+          <div id="hd-bar" class="vertical-bar__fill"></div>
+        </div>
+      </div>
+      <div id="box-diviser">
+        <div class="box-diviser-1">
+          <h2 class="tittle-box1">DISK Usage:</h2>
+          <h1><span id="disk">--</span>Kb/s</h1>
+        </div>
+        <div class="box-diviser-1">
+          <h2 class="tittle-box1">NET Usage:</h2>
+          <h1><span id="down">--</span>Mb/s</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
